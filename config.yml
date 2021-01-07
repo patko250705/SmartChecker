@@ -1,0 +1,29 @@
+# SmartChecker v0.2 by Patko Cr4cking
+# Subscribe my YT: https://bit.ly/2MGKtHt
+# Join my Discord Server: https://discord.gg/e5hYgp4k2H
+checker:
+
+  # Rechecks per account. higher = slower, 1+
+  retries: 1
+
+  # Request Timeout 
+  timeout: 6000
+
+  # Threads of Checking
+  threads: 600
+
+  # Save Bad Accounts in Bad.txt
+  save_bad: false
+
+  # Print Bad Accounts
+  print_bad: true
+
+  debugging: false
+
+  proxy:
+   # If you dont use proxies your IP get banned
+   proxy: true
+   # Type of proxies: https, socks4, socks5
+   proxy_type: 'socks4'
+
+
