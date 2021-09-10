@@ -1,29 +1,63 @@
-# SmartChecker v0.2 by Patko Cr4cking
-# Subscribe my YT: https://bit.ly/2MGKtHt
-# Join my Discord Server: https://discord.gg/e5hYgp4k2H
-checker:
+SmartChecker:
 
-  # Rechecks per account. higher = slower, 1+
-  retries: 1
+  # Rechecks per account. higher = slower, Public proxies: 3-6, Paid: 1-3
+  retries: 3
 
-  # Request Timeout 
-  timeout: 6000
+  # Request Timeout
+  timeout: 4500
 
-  # Threads of Checking
-  threads: 600
-
-  # Save Bad Accounts in Bad.txt
-  save_bad: false
-
-  # Print Bad Accounts
+ # Threads of Checking 200-400 recommended
+  threads: 750
+  
+  # Removing duplicates in combo
+  combo_duplicates: true
+  
+  # Removing duplicates in proxy/api
+  proxy_duplicates: true
+  
+  # Check hits for Mail Acces (MFA)
+  mail_access: true
+  
+  # Save NFA, SFA accounts
+  save_ranked_type: true
+  
+  # Print bad accounts
   print_bad: true
 
+  # Bad Account print color when print_bad is true, Colors: red, white
+  print_bad_color: 'red'
+  
+  # Save bad accounts
+  save_bad: false
+
+  # Normal users should keep this false unless problem start happening
   debugging: false
+  
+  # Checking for capes
+  capes:
+    optifine: true
+    mojang:  true
 
   proxy:
-   # If you dont use proxies your IP get banned
-   proxy: true
-   # Type of proxies: https, socks4, socks5
-   proxy_type: 'socks4'
-
-
+    # Use proxies?
+    proxy: true
+    # locks proxy other threads cant use it.
+    lock_proxy: false
+    # Removing bad proxies
+    remove_bad_proxy: false
+    # Remove bad proxy limit
+    proxy_remove_limit: 2000
+    # Proxy type: https, socks4, socks5 (all work for now)
+    proxy_type: 'socks4'
+    # Use proxies for sfa? if not ip ban
+    proxy_for_sfa: false
+    # If dont use proxies set 0
+    sleep_proxyless: 30
+    
+    api:
+      # Use proxies api?
+      use: true
+      # If true use link:
+      api_link: "https://api.proxyscrape.com/?request=getproxies&proxytype=socks4&timeout=4000"
+      # If use true, put min. 30 (getting new proxies in seconds)
+      refresh_time: 300
