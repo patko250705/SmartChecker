@@ -1,8 +1,7 @@
 Latest version of SmartChecker is v0.4
 Iam working on v0.5
 
-Currently have problem with multiprocessing
-
+RIP API
 
 
 v0.5:
@@ -15,3 +14,4 @@ Optimized code
 Working on:
 Save remaining combo list when closed or pressed keyword
 Making multiprocessing faster
+NEW API
